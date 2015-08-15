@@ -1,0 +1,6 @@
+namespace MessageEmotionQuerySystem.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}

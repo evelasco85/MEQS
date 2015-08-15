@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Web
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageEmotionQuerySystem", "MessageEmotionQuerySystem\MessageEmotionQuerySystem.csproj", "{30D4206E-C580-4A2E-A526-DCD475D3926A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageEmotionQuerySystem.Tests", "MessageEmotionQuerySystem.Tests\MessageEmotionQuerySystem.Tests.csproj", "{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageEmotionQuerySystem.WebApi", "MessageEmotionQuerySystem.WebApi\MessageEmotionQuerySystem.WebApi.csproj", "{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAnalyzer.Base", "MessageAnalyzer.Base\MessageAnalyzer.Base.csproj", "{52584D8F-1CE6-47FB-BBDB-67525B6CE67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAnalyzer.en-US", "MessageAnalyzer.en-US\MessageAnalyzer.en-US.csproj", "{F1630820-4448-4414-89E4-40D6A30CA50D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{30D4206E-C580-4A2E-A526-DCD475D3926A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30D4206E-C580-4A2E-A526-DCD475D3926A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30D4206E-C580-4A2E-A526-DCD475D3926A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30D4206E-C580-4A2E-A526-DCD475D3926A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52584D8F-1CE6-47FB-BBDB-67525B6CE67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52584D8F-1CE6-47FB-BBDB-67525B6CE67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52584D8F-1CE6-47FB-BBDB-67525B6CE67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52584D8F-1CE6-47FB-BBDB-67525B6CE67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1630820-4448-4414-89E4-40D6A30CA50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1630820-4448-4414-89E4-40D6A30CA50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1630820-4448-4414-89E4-40D6A30CA50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1630820-4448-4414-89E4-40D6A30CA50D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
