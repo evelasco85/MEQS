@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace MessageAnalyzer.en_US.Tests
 {
@@ -12,7 +13,11 @@ namespace MessageAnalyzer.en_US.Tests
         {
             StringBuilder jsonData = BluemixSentiment.GetInstance().GetMessageSentimentWeight("I am sad");
 
-            Assert.IsNotNull(jsonData);
+            JObject jsonResult = JObject.Parse(jsonData.ToString());
+
+            string score = jsonResult["doc-sentiment"]["score"].ToString();
+
+            Assert.AreEqual(-0.857924, Convert.ToDouble(score));
         }
     }
 }

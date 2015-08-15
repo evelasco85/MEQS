@@ -36,6 +36,7 @@ namespace MessageAnalyzer.en_US
             StringBuilder jsonData = RequestProcessor.GetInstance().SendRequest(null, "application/json", completeUrl, "application/json; charset=utf-8", "GET", null, 3000);
 
             return jsonData;
+
         }
 
     }
