@@ -9,11 +9,11 @@ namespace MessageAnalyzer.Base
 {
     public interface IMessageEmotionDetection
     {
-        int GetMessageWeigth(IMessageVerifierAlgorithmBase algorithm, ILocalization localization, IMessage message);
+        int GetMessageWeigth(IMessageVerifierAlgorithm algorithm, ILocalization localization, IMessage message);
     }
 
     public abstract class MessageEmotionDetectionBase : IMessageEmotionDetection
     {
-        public abstract int GetMessageWeigth(IMessageVerifierAlgorithmBase algorithm, ILocalization localization, IMessage message);
+        public abstract int GetMessageWeigth(IMessageVerifierAlgorithm algorithm, ILocalization localization, IMessage message);
     }
 }
