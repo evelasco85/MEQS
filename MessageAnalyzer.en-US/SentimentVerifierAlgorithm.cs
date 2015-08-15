@@ -9,9 +9,11 @@ namespace MessageAnalyzer.en_US
 {
     public class SentimentVerifierAlgorithm : MessageVerifierAlgorithmBase
     {
-        public override float GetMessageWeigth(Base.Model.IMessage message, ILocalization localization)
+        public override double GetMessageWeigth(Base.Model.IMessage message, ILocalization localization)
         {
-            throw new NotImplementedException();
+            double score = BluemixSentiment.GetInstance().GetMessageSentimentScore(message.Content.ToString());
+
+            return score;
         }
     }
 }

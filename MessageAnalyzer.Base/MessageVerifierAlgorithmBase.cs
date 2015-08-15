@@ -9,11 +9,11 @@ namespace MessageAnalyzer.Base
 {
     public interface IMessageVerifierAlgorithm
     {
-        float GetMessageWeigth(IMessage message, ILocalization localization);
+        double GetMessageWeigth(IMessage message, ILocalization localization);
     }
 
     public abstract class MessageVerifierAlgorithmBase : IMessageVerifierAlgorithm
     {
-        public abstract float GetMessageWeigth(IMessage message, ILocalization localization);
+        public abstract double GetMessageWeigth(IMessage message, ILocalization localization);
     }
 }

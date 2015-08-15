@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace MessageAnalyzer.en_US
 {
     public interface IBluemixSentiment
     {
-        StringBuilder GetMessageSentimentWeight(string content);
+        double GetMessageSentimentScore(string content);
     }
 
     public class BluemixSentiment : IBluemixSentiment
@@ -26,7 +27,7 @@ namespace MessageAnalyzer.en_US
 
         private BluemixSentiment() { }
 
-        public StringBuilder GetMessageSentimentWeight(string content)
+        public double GetMessageSentimentScore(string content)
         {
             string url = "http://sentimentprovider.mybluemix.net";
             string function = "RetrieveMessageSentimentWeight";
@@ -35,8 +36,11 @@ namespace MessageAnalyzer.en_US
             string completeUrl = string.Format("{0}/{1}?{2}", url, function, parameter);
             StringBuilder jsonData = RequestProcessor.GetInstance().SendRequest(null, "application/json", completeUrl, "application/json; charset=utf-8", "GET", null, 3000);
 
-            return jsonData;
+            JObject jsonResult = JObject.Parse(jsonData.ToString());
 
+            string score = jsonResult["doc-sentiment"]["score"].ToString();
+
+            return Convert.ToDouble(score);
         }
 
     }

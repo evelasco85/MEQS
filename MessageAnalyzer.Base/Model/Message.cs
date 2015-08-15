@@ -10,20 +10,20 @@ namespace MessageAnalyzer.Base.Model
     {
         StringBuilder Content { get; set; }
         string Source { get; set; }
-        int Weight { get; set; }
+        int Score { get; set; }
     }
 
     public class Message : IMessage
     {
         StringBuilder _content;
         string _source;
-        int _weigth;
+        int _score;
 
         public Message()
         {
             this._content = new StringBuilder();
             this._source = string.Empty;
-            this._weigth = 0;
+            this._score = 0;
         }
 
         public StringBuilder Content
@@ -50,15 +50,15 @@ namespace MessageAnalyzer.Base.Model
             }
         }
 
-        public int Weight
+        public int Score
         {
             get
             {
-                return this._weigth;
+                return this._score;
             }
             set
             {
-                this._weigth = value;
+                this._score = value;
             }
         }
     }

@@ -11,13 +11,9 @@ namespace MessageAnalyzer.en_US.Tests
         [TestMethod]
         public void TestGetMessageSentimentWeight()
         {
-            StringBuilder jsonData = BluemixSentiment.GetInstance().GetMessageSentimentWeight("I am sad");
+            double score = BluemixSentiment.GetInstance().GetMessageSentimentScore("I am sad");
 
-            JObject jsonResult = JObject.Parse(jsonData.ToString());
-
-            string score = jsonResult["doc-sentiment"]["score"].ToString();
-
-            Assert.AreEqual(-0.857924, Convert.ToDouble(score));
+            Assert.AreEqual(-0.857924, score);
         }
     }
 }
