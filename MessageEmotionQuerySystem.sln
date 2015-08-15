@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageEmotionQuerySystem",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageEmotionQuerySystem.Tests", "MessageEmotionQuerySystem.Tests\MessageEmotionQuerySystem.Tests.csproj", "{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageEmotionQuerySystem.WebApi", "MessageEmotionQuerySystem.WebApi\MessageEmotionQuerySystem.WebApi.csproj", "{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3080E6D6-7A13-4FF6-A628-44D0E6599B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16F10DC-DCB4-4E18-A1A7-A79D434564D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
