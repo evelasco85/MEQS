@@ -52,6 +52,11 @@
   <ItemGroup>
     <Compile Include="ExecutionEngineTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleData.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -69,6 +74,15 @@
       <Project>{d7e1e6a4-2eaa-45f7-b530-0b341e70aa5b}</Project>
       <Name>MessageAnalyzerExecutionEngine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SampleData.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SampleData.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

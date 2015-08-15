@@ -42,7 +42,10 @@ namespace MessageAnalyzer.en_US
             {
                 JObject jsonResult = JObject.Parse(jsonData.ToString());
 
-                score = Convert.ToDouble(jsonResult["doc-sentiment"]["score"].ToString());
+                object scoreString = jsonResult["doc-sentiment"]["score"];
+
+                if (scoreString != null)
+                    score = Convert.ToDouble(scoreString.ToString());
             }
 
             return score;

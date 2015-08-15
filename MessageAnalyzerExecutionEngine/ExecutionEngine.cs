@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using MessageAnalyzer.Base.Model;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace MessageAnalyzerExecutionEngine
 {
@@ -13,6 +16,7 @@ namespace MessageAnalyzerExecutionEngine
     {
         void RegisterAnalyzer(ILocalization localization, IMessageVerifierAlgorithm algorithm);
         double AnalyzeScore(string localizationCode, IMessage message);
+        string AnalyzeScores(string localizationCode, string messages);
     }
 
     public class ExecutionEngine : IExecutionEngine
@@ -72,6 +76,38 @@ namespace MessageAnalyzerExecutionEngine
             score = algorithm.GetMessageWeigth(message, localization);
 
             return score;
+        }
+
+        public string AnalyzeScores(string localizationCode, string messages)
+        {
+            JsonSerializer serializer = new JsonSerializer();
+            TextReader reader = new StringReader(messages);
+            JArray jArray = (JArray)serializer.Deserialize(reader, typeof(JArray));
+
+            JArray scoreResults = new JArray();
+
+            for (int index = 0; index < jArray.Count; index++ )
+            {
+                JToken entry = jArray[index];
+                IMessage message = new Message
+                {
+                     Content = new StringBuilder( entry["text"].ToString())
+                };
+
+                double score =  this.AnalyzeScore(localizationCode, message);
+
+                entry["Score"] = score;
+
+                scoreResults.Add(entry);
+            }
+
+            TextWriter writer = new StringWriter();
+
+            serializer.Serialize(writer, scoreResults);
+
+            string mergedJsonResult = writer.ToString();
+
+            return mergedJsonResult;
         }
     }
 }

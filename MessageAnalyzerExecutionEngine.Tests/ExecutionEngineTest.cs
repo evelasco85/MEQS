@@ -28,5 +28,20 @@ namespace MessageAnalyzerExecutionEngine.Tests
 
             Assert.AreEqual(-0.857924, score);
         }
+
+        [TestMethod]
+        public void TestAnalyzeScores()
+        {
+            IMessageVerifierAlgorithm algorithm = new SentimentVerifierAlgorithm();
+            ILocalization localization = new En_Us_Localization();
+
+            ExecutionEngine.GetInstance().RegisterAnalyzer(localization, algorithm);
+
+            string messages = SampleData.request;
+
+            string scoreResults = ExecutionEngine.GetInstance().AnalyzeScores("en-US", messages);
+
+            Assert.IsNotNull(scoreResults);
+        }
     }
 }

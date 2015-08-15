@@ -2,6 +2,7 @@
 using MessageAnalyzer.Base.Model;
 using MessageAnalyzer.en_US;
 using MessageAnalyzerExecutionEngine;
+using MessageEmotionQuerySystem.WebApi.Handler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,32 @@ namespace MessageEmotionQuerySystem.WebApi.Controllers
             double score = ExecutionEngine.GetInstance().AnalyzeScore(localizationCode, messageEntity);
 
             return score;
+        }
+
+        [HttpPost]
+        public string GetMessageScores(string localizationCode, string messages)
+        {
+            string completeMessages = this.GetRequestContent(this);
+
+            string scores = ExecutionEngine.GetInstance().AnalyzeScores(localizationCode, completeMessages);
+
+            return scores;
+        }
+
+        public string GetRequestContent(ApiController controller)
+        {
+            StringBuilder content = new StringBuilder();
+
+            ContentHandler handler = controller.Request
+                .GetConfiguration()
+                .MessageHandlers
+                .Where(customHandler => customHandler.GetType() == typeof(ContentHandler))
+                .FirstOrDefault() as ContentHandler;
+
+            if ((handler != null) && (handler.RequestContent != null))
+                content = handler.RequestContent;
+
+            return content.ToString();
         }
     }
 }
