@@ -8,11 +8,12 @@ namespace MessageAnalyzer.Base
 {
     public interface ILocalization
     {
-
+        string LocalizationCode { get; }
     }
 
 
     public abstract class LocalizationBase : ILocalization
     {
+        public abstract string LocalizationCode { get; }
     }
 }
