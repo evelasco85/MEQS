@@ -7,10 +7,9 @@ using System.Web.Http;
 
 namespace MessageEmotionQuerySystem.WebApi.Controllers
 {
-    [RoutePrefix("api/Test")]
     public class TestController : ApiController
     {
-        [Route("HelloWorld")]
+        [HttpGet]
         public string HelloWorld()
         {
             return "hello world";

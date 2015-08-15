@@ -123,12 +123,14 @@ namespace Utilities
                 HttpWebResponse response = ex.Response as HttpWebResponse;
                 StringBuilder responseExceptionData = new StringBuilder();
 
+                if (response == null)
+                    return responseData;
+
                 using (StreamReader responseReader = new StreamReader(response.GetResponseStream()))
                 {
                     responseExceptionData.Append(responseReader.ReadToEnd());
+                    ex.Data.Add("ResponseException", responseExceptionData.ToString());
                 }
-
-                ex.Data.Add("ResponseException", responseExceptionData.ToString());
 
                 throw ex;
             }

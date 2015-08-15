@@ -36,11 +36,16 @@ namespace MessageAnalyzer.en_US
             string completeUrl = string.Format("{0}/{1}?{2}", url, function, parameter);
             StringBuilder jsonData = RequestProcessor.GetInstance().SendRequest(null, "application/json", completeUrl, "application/json; charset=utf-8", "GET", null, 3000);
 
-            JObject jsonResult = JObject.Parse(jsonData.ToString());
+            double score = 0;
 
-            string score = jsonResult["doc-sentiment"]["score"].ToString();
+            if ((jsonData != null) && (!string.IsNullOrEmpty(jsonData.ToString())))
+            {
+                JObject jsonResult = JObject.Parse(jsonData.ToString());
 
-            return Convert.ToDouble(score);
+                score = Convert.ToDouble(jsonResult["doc-sentiment"]["score"].ToString());
+            }
+
+            return score;
         }
 
     }
