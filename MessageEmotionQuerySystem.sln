@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAnalyzer.Base", "Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAnalyzer.en-US", "MessageAnalyzer.en-US\MessageAnalyzer.en-US.csproj", "{F1630820-4448-4414-89E4-40D6A30CA50D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAnalyzer.en-US.Tests", "MessageAnalyzer.en-US.Tests\MessageAnalyzer.en-US.Tests.csproj", "{D7CA75F1-E541-488F-BD55-091352C7D915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F1630820-4448-4414-89E4-40D6A30CA50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1630820-4448-4414-89E4-40D6A30CA50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1630820-4448-4414-89E4-40D6A30CA50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CA75F1-E541-488F-BD55-091352C7D915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CA75F1-E541-488F-BD55-091352C7D915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CA75F1-E541-488F-BD55-091352C7D915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CA75F1-E541-488F-BD55-091352C7D915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
