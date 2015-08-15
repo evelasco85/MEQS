@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="LocalizationBase.cs" />
     <Compile Include="MessageEmotionDetectionBase.cs" />
+    <Compile Include="MessageVerifierAlgorithmBase.cs" />
+    <Compile Include="Model\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
