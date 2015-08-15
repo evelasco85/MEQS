@@ -37,7 +37,7 @@ namespace MessageEmotionQuerySystem.WebApi.Controllers
         }
 
         [HttpPost]
-        public string GetMessageScores(string localizationCode, string messages)
+        public string GetMessageScores(string localizationCode)
         {
             string completeMessages = this.GetRequestContent(this);
 

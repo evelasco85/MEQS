@@ -1,13 +1,5 @@
 [
-    {
-        "profile_pic": "https://pbs.twimg.com/profile_images/1587852208/1968208-rikimaru_icon_normal.jpg",
-        "text": "@mae_dessie remember this post, this is during the hackaton in davao!",
-        "profile_id": 388217388,
-        "stream_id": 632529219742908416,
-        "profile_name": "obliviousanima",
-        "time": "Mon Oct 10 11:38:06 +0000 2011",
-        "batch_id": 12345678911159
-    },
+    23ri,
     {
         "profile_pic": "https://pbs.twimg.com/profile_images/1587852208/1968208-rikimaru_icon_normal.jpg",
         "text": "@mae_dessie hello there hate!",
