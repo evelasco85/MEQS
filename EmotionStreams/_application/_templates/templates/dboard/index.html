@@ -1,0 +1,23 @@
+{% extends 'base_index.html' %}
+
+{% block 'Stream_feeds' %}
+    {% for stream in Streams_ %}
+    <div class="col-md-6 Stream-list Stream-{{ stream.emotion_val }}-class">
+        <div class="col-md-12 Stream-box">
+            <div class="Stream-read">
+                <div class="Stream-info-show">
+                <b>{{ stream.text }}</b>
+                </div>
+            </div>
+            <div class="Stream-view">
+                <div class="Stream-avatar"><img src="{{ stream.profile_pic }}"/></div>
+                <div class="Stream-info">
+                    <b>{{ stream.profile_name }}</b> <br/>
+                    <span>via <b>twitter</b> just now </span>
+                </div>
+                <div class="Stream-emotion Stream-{{ stream.emotion_val }}">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock 'Stream_feeds' %}

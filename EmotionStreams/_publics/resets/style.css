@@ -1,0 +1,105 @@
+body { background: #7ed3f6 url('../images/background-final.png') bottom center no-repeat; }
+.navbar { background: #b9dcf1; border-bottom-color: #b9dcf1; }
+.Stream-wrapper { height: 200px; margin-top: 80px; height: 800px; }
+.Stream-box {
+    background: #fff;
+    height: 80px;
+    margin: 0 0 30px 0;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.Stream-avatar, .Stream-info {
+    float: left;
+}
+.Stream-emotion{
+    float: right;
+}
+.Stream-avatar {
+    width: 40px;
+    height: 40px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 70px;
+}
+.Stream-info {
+    width: 160px;
+    height: 40px;
+    margin: 20px 0 20px 10px;
+}
+.Stream-info-show{
+    width: 200px;
+    height: 40px;
+    margin: 20px 0 20px 10px;
+    font-size: 12px;
+}
+.Stream-info b {
+    color: #444;
+    font-size: 15px;
+}
+.Stream-info span {
+    color: #666;
+    font-size: 12px;
+}
+
+.Stream-info span b{
+    color: #555;
+    font-size: 13px;
+}
+.Stream-emotion {
+    background: #fff url('../images/icons.png') bottom center no-repeat;
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+    border-radius: 70px;
+}
+.Stream-emotion-btn {
+    background: url('../images/icons.png') bottom center no-repeat;
+    width: 60px;
+    height: 62px;
+    margin: 10px auto;
+    border-radius: 70px;
+    cursor: pointer;
+}
+.Stream-emotion-btn-wrapper {
+    text-align: center;
+}
+.Stream-emotion-btn-caption {
+    background: #5076f2;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2px;
+    border-radius: 70px;
+    padding: 10px 5px;
+}
+
+.Stream-joy {
+    background-position: 0 0;
+}
+.Stream-happy {
+    background-position: 0 -60px;
+}
+.Stream-surprise {
+    background-position: 0 -120px;
+}
+.Stream-shock {
+    background-position: 0 -180px;
+}
+.Stream-unexpected {
+    background-position: 0 -240px;
+}
+.Stream-neutral {
+    background-position: 0 -300px;
+}
+
+.hide-stream { display: none; }
+.show-stream { display: inline; }
+
+.Stream-box:hover > .test{
+    display: none;
+}
+
+.Stream-read { display: none; }
+.Stream-view { }
