@@ -13,6 +13,8 @@ namespace MessageAnalyzer.en_US
         {
             double score = BluemixSentiment.GetInstance().GetMessageSentimentScore(message.Content.ToString());
 
+            BluemixSentiment.GetInstance().PersistMessage(message.Metadata);
+
             return score;
         }
     }

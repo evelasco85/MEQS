@@ -91,7 +91,8 @@ namespace MessageAnalyzerExecutionEngine
                 JToken entry = jArray[index];
                 IMessage message = new Message
                 {
-                     Content = new StringBuilder( entry["text"].ToString())
+                     Content = new StringBuilder( entry["text"].ToString()),
+                     Metadata = new StringBuilder(entry.ToString())
                 };
 
                 double score =  this.AnalyzeScore(localizationCode, message);

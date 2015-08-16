@@ -11,19 +11,29 @@ namespace MessageAnalyzer.Base.Model
         StringBuilder Content { get; set; }
         string Source { get; set; }
         int Score { get; set; }
+        StringBuilder Metadata { get; set; }
     }
 
     public class Message : IMessage
     {
         StringBuilder _content;
+        StringBuilder _metadata;
         string _source;
         int _score;
 
+
         public Message()
         {
+            this._metadata = new StringBuilder();
             this._content = new StringBuilder();
             this._source = string.Empty;
             this._score = 0;
+        }
+
+        public StringBuilder Metadata
+        {
+            get { return this._metadata; }
+            set { this._metadata = value; }
         }
 
         public StringBuilder Content

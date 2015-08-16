@@ -11,6 +11,7 @@ namespace MessageAnalyzer.en_US
     public interface IBluemixSentiment
     {
         double GetMessageSentimentScore(string content);
+        void PersistMessage(StringBuilder metadata);
     }
 
     public class BluemixSentiment : IBluemixSentiment
@@ -51,5 +52,14 @@ namespace MessageAnalyzer.en_US
             return score;
         }
 
+        public void PersistMessage(StringBuilder metadata)
+        {
+            string url = "http://sentimentprovider.mybluemix.net";
+            string function = "PersistMessageMetadata";
+
+            string completeUrl = string.Format("{0}/{1}", url, function);
+            StringBuilder jsonData = RequestProcessor.GetInstance().SendRequest(null, "application/json", completeUrl, "application/json; charset=utf-8", "POST", metadata, 3000);
+
+        }
     }
 }

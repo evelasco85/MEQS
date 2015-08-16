@@ -27,32 +27,6 @@ namespace Utilities
 
             return _processor;
         }
-        //public void Process(IRequestBuilder request, int timeoutMS)
-        //{
-        //    StringBuilder responseData = new StringBuilder();
-        //    StringBuilder bodyData = request.GetBodyData();
-
-        //    try
-        //    {
-        //        string url =  this.GetServiceURL(request);
-        //        string acceptType = this._context.Accept;
-        //        string contentType = request.GetContentType();
-        //        string methodType = Enum.GetName(typeof(BuilderMethod), request.GetMethod());
-
-        //        IDictionary<string, string> headers = ((request.GetHeaderOverrides() == null) || (request.GetHeaderOverrides().Count == 0)) ? this._context.HeadersDictionary : request.GetHeaderOverrides();
-
-        //        request.SetCompleteRequestUrl(url);
-
-        //        responseData = this.ProcessRequest(headers, acceptType, url, contentType, methodType, bodyData, timeoutMS);
-
-        //        request.SetResponseData(responseData);
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        ex.Data.Add("Body Data", bodyData.ToString());
-        //        throw ex;
-        //    }
-        //}
 
         public StringBuilder SendRequest(IDictionary<string, string> headers, string acceptContent, string requestUrl, string contentType, string method, StringBuilder bodyData, int timeoutMS)
         {
